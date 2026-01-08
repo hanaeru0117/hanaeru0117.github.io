@@ -1,7 +1,7 @@
 .about {
     padding: var(--space-3xl) 0;
     background-color: #f4f1ea;
-    color: var(--color-text-primary);
+    color: #4a453a;
 }
 
 .about__content {
@@ -23,7 +23,7 @@
     font-family: var(--font-display);
     font-size: var(--text-lg);
     margin-bottom: var(--space-md);
-    color: var(--color-primary);
+    color: #8c7b6c;
     letter-spacing: 0.1em;
 }
 
@@ -56,11 +56,13 @@
     text-align: center;
     background-color: #eae6db;
     padding-bottom: 20vh;
+    color: #4a453a;
 }
 
 .contact__content p {
     margin-bottom: var(--space-xl);
     font-family: var(--font-body);
+    font-weight: 500;
 }
 
 .button {
