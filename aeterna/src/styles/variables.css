@@ -1,5 +1,4 @@
 :root {
-    /* 色彩 */
     --color-bg-primary: #0f1419;
     --color-bg-secondary: #1a2332;
     --color-bg-tertiary: #243447;
@@ -15,7 +14,6 @@
     --color-border: rgba(200, 190, 170, 0.15);
     --color-shadow: rgba(0, 0, 0, 0.4);
 
-    /* タイポグラフィ */
     --font-display: 'Cinzel', 'Playfair Display', serif;
     --font-body: 'Noto Sans JP', 'Helvetica Neue', sans-serif;
 
@@ -31,7 +29,6 @@
     --leading-normal: 1.6;
     --leading-relaxed: 1.8;
 
-    /* スペーシング */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -40,7 +37,6 @@
     --space-2xl: 3rem;
     --space-3xl: 5rem;
 
-    /* ボーダー・シャドウ */
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 16px;
@@ -50,12 +46,11 @@
     --shadow-md: 0 4px 12px var(--color-shadow);
     --shadow-lg: 0 8px 24px var(--color-shadow);
 
-    /* トランジション */
     --transition-fast: 150ms ease;
     --transition-normal: 300ms ease;
     --transition-slow: 500ms ease;
 
-    /* レイアウト */
     --container-max: 1200px;
+
     --header-height: 80px;
 }
