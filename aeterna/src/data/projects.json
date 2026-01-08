@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Aeterna Portfolio",
+        "description": "永遠の旅をテーマにしたポートフォリオサイト。ViteとモダンなCSSで構築。",
+        "image": "",
+        "tags": [
+            "HTML",
+            "CSS",
+            "Vite",
+            "JavaScript"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Ancient Library",
+        "description": "古文書を管理するための架空のWebアプリケーション。",
+        "image": "",
+        "tags": [
+            "React",
+            "TypeScript"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Forest Map",
+        "description": "迷いの森を探索するためのインタラクティブな地図。",
+        "image": "",
+        "tags": [
+            "Leaflet.js",
+            "GeoJSON"
+        ]
+    }
+]
