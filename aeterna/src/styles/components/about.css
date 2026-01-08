@@ -1,0 +1,101 @@
+.about {
+    padding: var(--space-3xl) 0;
+    background-color: #f4f1ea;
+    color: var(--color-text-primary);
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl);
+    align-items: center;
+    text-align: center;
+}
+
+.about__text p {
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-md);
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+}
+
+.about__skills-title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-md);
+    color: var(--color-primary);
+    letter-spacing: 0.1em;
+}
+
+.skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+.skill-list li {
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    padding: var(--space-xs) var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all var(--transition-normal);
+}
+
+.skill-list li:hover {
+    border-color: var(--color-primary);
+    background: var(--color-bg-primary);
+    transform: translateY(-2px);
+}
+
+.contact {
+    padding: var(--space-3xl) 0;
+    text-align: center;
+    background-color: #eae6db;
+    padding-bottom: 20vh;
+}
+
+.contact__content p {
+    margin-bottom: var(--space-xl);
+    font-family: var(--font-body);
+}
+
+.button {
+    display: inline-block;
+    padding: var(--space-md) var(--space-2xl);
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    text-decoration: none;
+    font-family: var(--font-display);
+    letter-spacing: 0.1em;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--transition-normal);
+    z-index: -1;
+}
+
+.button:hover {
+    color: var(--color-bg-primary);
+}
+
+.button:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
