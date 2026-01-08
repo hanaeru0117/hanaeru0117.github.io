@@ -15,7 +15,8 @@
     --color-shadow: rgba(0, 0, 0, 0.4);
 
     --font-display: 'Cinzel', 'Playfair Display', serif;
-    --font-body: 'Noto Sans JP', 'Helvetica Neue', sans-serif;
+    --font-description: 'Zen Old Mincho', serif;
+    --font-body: 'Zen Old Mincho', 'Helvetica Neue', serif;
 
     --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
     --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
