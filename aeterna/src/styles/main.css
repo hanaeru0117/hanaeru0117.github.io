@@ -2,5 +2,7 @@
 
 @import './variables.css';
 @import './base.css';
-@import './components/hero.css';@import './components/projects.css';
+@import './components/hero.css';
+@import './components/projects.css';
 @import './components/about.css';
+@import './components/contact.css';

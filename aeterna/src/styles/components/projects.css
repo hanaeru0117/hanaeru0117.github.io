@@ -2,6 +2,7 @@
     padding: var(--space-3xl) 0;
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 .projects__bg {
@@ -10,7 +11,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../images/backgrounds/projects-bg.jpg');
+    background-image: url('/images/backgrounds/projects-bg.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -21,18 +22,22 @@
     font-size: clamp(2rem, 5vw, 3rem);
     text-align: center;
     margin-bottom: var(--space-xs);
-    color: var(--color-primary);
+    color: #fff;
     letter-spacing: 0.1em;
+    text-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.6),
+        0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .projects__subtitle {
     text-align: center;
     font-family: var(--font-description);
     font-size: var(--text-sm);
-    color: var(--color-text-secondary);
+    color: #fff;
     margin-bottom: var(--space-2xl);
     letter-spacing: 0.2em;
-    opacity: 0.8;
+    opacity: 0.95;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .projects-grid {
@@ -43,7 +48,7 @@
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(20, 25, 30, 0.7);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     overflow: hidden;
