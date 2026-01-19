@@ -35,10 +35,8 @@ export function renderProjects(projects, container) {
 
   container.innerHTML = '';
 
-  projects.forEach((project, index) => {
+  projects.forEach((project) => {
     const card = createProjectCard(project);
-    card.style.opacity = '0';
-    card.style.animation = `fadeInUp 0.6s ease forwards ${index * 0.1}s`;
     container.appendChild(card);
   });
 }
