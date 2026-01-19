@@ -45,10 +45,6 @@ h3 {
     font-size: var(--text-xl);
 }
 
-h4 {
-    font-size: var(--text-lg);
-}
-
 p {
     margin-bottom: var(--space-md);
 }
@@ -69,13 +65,6 @@ img {
     display: block;
 }
 
-button {
-    font-family: inherit;
-    cursor: pointer;
-    border: none;
-    background: none;
-}
-
 ul,
 ol {
     list-style: none;
@@ -86,15 +75,4 @@ ol {
     max-width: var(--container-max);
     margin: 0 auto;
     padding: 0 var(--space-lg);
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
 }
