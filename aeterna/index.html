@@ -4,6 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Aeterna - 永遠の時を刻むポートフォリオ" />
   <title>Aeterna</title>
@@ -11,18 +18,25 @@
 
 <body>
   <div id="app">
+    <button id="menu-trigger" class="ui-button ui-button--menu" aria-label="Menu">
+      <span class="ui-button__icon"></span>
+    </button>
+
     <div class="transition-wrapper">
       <div class="sticky-container">
-        <!-- Section 1: Hero -->
         <header id="hero" class="hero section-layer" style="z-index: 4;">
           <div class="hero__bg"></div>
           <div class="hero__content">
             <h1 class="hero__title">Aeterna</h1>
             <p class="hero__subtitle">永遠の旅路を記す場所</p>
           </div>
+
+          <button id="hero-action" class="ui-button ui-button--action" aria-label="Explore">
+            <span class="ui-button__text">Explore</span>
+            <span class="ui-button__glow"></span>
+          </button>
         </header>
 
-        <!-- Section 2: Projects -->
         <section id="projects" class="projects section-layer" style="z-index: 3;">
           <div class="projects__bg"></div>
           <div class="container">
@@ -34,7 +48,6 @@
           </div>
         </section>
 
-        <!-- Section 3: About -->
         <section id="about" class="about section-layer" style="z-index: 2;">
           <div class="about__bg"></div>
           <div class="container container--narrow">
@@ -55,7 +68,7 @@
                 <h3 class="about__skills-title">Skill Set</h3>
                 <ul class="skill-list">
                   <li>JavaScript</li>
-                  <li>React / Next.js</li>
+                  <li>Python / Django</li>
                   <li>CSS / Styling</li>
                   <li>UI Design</li>
                 </ul>
@@ -64,7 +77,6 @@
           </div>
         </section>
 
-        <!-- Section 4: Contact -->
         <section id="contact" class="contact section-layer" style="z-index: 1;">
           <div class="contact__bg"></div>
           <div class="container">

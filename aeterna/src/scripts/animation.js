@@ -99,8 +99,10 @@ function applyMirageEffect(currentSection, nextSection, progress) {
             content.style.opacity = '';
         }
     } else {
-        if (delayedProgress < 0.6) {
-            const p1 = delayedProgress / 0.6;
+        // Phase 1: Fade Out (0.0 -> 0.45)
+        // Adjust logic to fully disappear before next starts
+        if (delayedProgress < 0.45) {
+            const p1 = delayedProgress / 0.45;
             currentSection.style.opacity = 1 - p1;
             currentSection.style.filter = `blur(${p1 * 10}px) brightness(${1 + p1 * 0.5})`;
             currentSection.style.transform = `scale(${1 + p1 * 0.1})`;
@@ -119,11 +121,15 @@ function applyMirageEffect(currentSection, nextSection, progress) {
         nextSection.style.opacity = 1;
         nextSection.style.filter = 'none';
         nextSection.style.transform = 'scale(1)';
+        nextSection.style.pointerEvents = 'auto'; // Ensure clickable
     } else if (progress <= 0) {
         nextSection.style.opacity = 0;
+        nextSection.style.pointerEvents = 'none';
     } else {
-        if (delayedProgress > 0.4) {
-            const p2 = (delayedProgress - 0.4) / 0.6;
+        // Phase 2: Fade In (0.55 -> 1.0)
+        // Start fading in only after previous section is gone (with slight gap)
+        if (delayedProgress > 0.55) {
+            const p2 = (delayedProgress - 0.55) / 0.45;
             nextSection.style.opacity = p2;
             nextSection.style.transform = `scale(${1.1 - p2 * 0.1})`;
             nextSection.style.filter = `blur(${(1 - p2) * 10}px)`;

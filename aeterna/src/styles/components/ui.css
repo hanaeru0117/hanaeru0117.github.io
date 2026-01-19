@@ -1,0 +1,161 @@
+.ui-button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(40, 50, 60, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.15),
+        inset 0 0 20px rgba(255, 255, 255, 0.05);
+
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.ui-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(60deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: translateX(-100%);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+}
+
+.ui-button:hover::before {
+    transform: translateX(100%);
+}
+
+.ui-button:hover {
+    background: rgba(30, 40, 50, 0.4);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow:
+        0 0 30px rgba(255, 255, 255, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.ui-button--menu {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.ui-button__icon {
+    width: 28px;
+    height: 1.5px;
+    background-color: currentColor;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.ui-button__icon::before,
+.ui-button__icon::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 1.5px;
+    background-color: currentColor;
+    left: 0;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ui-button__icon::before {
+    transform: translateY(-7px);
+}
+
+.ui-button__icon::after {
+    transform: translateY(7px);
+}
+
+.ui-button--menu:hover .ui-button__icon::before {
+    transform: translateY(-9px);
+}
+
+.ui-button--menu:hover .ui-button__icon::after {
+    transform: translateY(9px);
+}
+
+
+.ui-button--action {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    padding: 1.5rem 4rem;
+    border-radius: 100px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.ui-button--action .ui-button__text {
+    position: relative;
+    z-index: 2;
+    transform: translateY(1px);
+}
+
+.ui-button--action:hover {
+    letter-spacing: 0.2em;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.ui-button--action {
+    animation: pulse-glow 4s infinite;
+}
+
+@media (max-width: 768px) {
+    .ui-button--menu {
+        top: 1.5rem;
+        right: 1.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .ui-button--action {
+        bottom: 2rem;
+        left: 2rem;
+        padding: 1.2rem 3rem;
+        font-size: 1.1rem;
+    }
+}
