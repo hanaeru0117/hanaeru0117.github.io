@@ -11,69 +11,74 @@
 
 <body>
   <div id="app">
-    <header id="hero" class="hero">
-      <div class="hero__bg"></div>
-      <div class="hero__content">
-        <h1 class="hero__title">Aeterna</h1>
-        <p class="hero__subtitle">永遠の旅路を記す場所</p>
+    <div class="transition-wrapper">
+      <div class="sticky-container">
+        <!-- Section 1: Hero -->
+        <header id="hero" class="hero section-layer" style="z-index: 4;">
+          <div class="hero__bg"></div>
+          <div class="hero__content">
+            <h1 class="hero__title">Aeterna</h1>
+            <p class="hero__subtitle">永遠の旅路を記す場所</p>
+          </div>
+        </header>
+
+        <!-- Section 2: Projects -->
+        <section id="projects" class="projects section-layer" style="z-index: 3;">
+          <div class="projects__bg"></div>
+          <div class="container">
+            <h2 class="projects__title">Archives</h2>
+            <p class="projects__subtitle">これまでの旅路</p>
+            <div id="projects-grid" class="projects-grid">
+              <!-- JavaScriptでカードを表示 -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: About -->
+        <section id="about" class="about section-layer" style="z-index: 2;">
+          <div class="about__bg"></div>
+          <div class="container container--narrow">
+            <h2 class="about__title">Adventurer</h2>
+            <p class="about__subtitle">旅人について</p>
+            <div class="about__content">
+              <div class="about__text">
+                <p>
+                  数多のコードとデザインの森を抜け、<br>
+                  理想の世界を構築するために旅を続けています。
+                </p>
+                <p>
+                  「美しさ」と「機能性」が調和する場所を求めて。<br>
+                  魔法（技術）を用いて、心に残る体験を創り出します。
+                </p>
+              </div>
+              <div class="about__skills">
+                <h3 class="about__skills-title">Skill Set</h3>
+                <ul class="skill-list">
+                  <li>JavaScript</li>
+                  <li>React / Next.js</li>
+                  <li>CSS / Styling</li>
+                  <li>UI Design</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: Contact -->
+        <section id="contact" class="contact section-layer" style="z-index: 1;">
+          <div class="contact__bg"></div>
+          <div class="container">
+            <h2 class="contact__title">Contact</h2>
+            <p class="contact__subtitle">手紙を送る</p>
+            <div class="contact__content">
+              <p>旅の依頼や協力の要請はこちらから。</p>
+              <a href="mailto:nakatanikey@gmail.com" class="button button--primary">Send Message</a>
+            </div>
+          </div>
+        </section>
       </div>
-    </header>
-    <main class="main">
-      <section id="projects" class="projects">
-        <div class="projects__bg"></div>
-        <div class="container">
-          <h2 class="projects__title">Archives</h2>
-          <p class="projects__subtitle">これまでの旅路</p>
-          <div id="projects-grid" class="projects-grid">
-            <!-- JavaScriptでカードを表示 -->
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="about">
-        <div class="about__bg"></div>
-        <div class="container container--narrow">
-          <h2 class="about__title">Adventurer</h2>
-          <p class="about__subtitle">旅人について</p>
-
-          <div class="about__content">
-            <div class="about__text">
-              <p>
-                数多のコードとデザインの森を抜け、<br>
-                理想の世界を構築するために旅を続けています。
-              </p>
-              <p>
-                「美しさ」と「機能性」が調和する場所を求めて。<br>
-                魔法（技術）を用いて、心に残る体験を創り出します。
-              </p>
-            </div>
-
-            <div class="about__skills">
-              <h3 class="about__skills-title">Skill Set</h3>
-              <ul class="skill-list">
-                <li>JavaScript</li>
-                <li>React / Next.js</li>
-                <li>CSS / Styling</li>
-                <li>UI Design</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact">
-        <div class="contact__bg"></div>
-        <div class="container">
-          <h2 class="contact__title">Contact</h2>
-          <p class="contact__subtitle">手紙を送る</p>
-
-          <div class="contact__content">
-            <p>旅の依頼や協力の要請はこちらから。</p>
-            <a href="mailto:nakatanikey@gmail.com" class="button button--primary">Send Message</a>
-          </div>
-        </div>
-      </section>
-      <script type="module" src="src/main.js"></script>
+    </div>
+    <script type="module" src="src/main.js"></script>
 </body>
 
 </html>

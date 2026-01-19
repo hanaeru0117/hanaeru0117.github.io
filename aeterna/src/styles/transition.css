@@ -1,0 +1,41 @@
+.transition-wrapper {
+    position: relative;
+    /* 
+      セクション数 + 余韻で高さを決定
+      4セクションあるので、ゆっくり見せるために少し長めに確保
+      例: 500vh (4セクション + 遷移余白)
+    */
+    height: 500vh;
+    width: 100%;
+    background-color: var(--color-bg-primary);
+}
+
+.sticky-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sticky-container .section-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: opacity, transform, filter;
+    transition: filter 0.1s linear;
+}
+
+.sticky-container .section-layer:not(:first-child) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero__bg,
+.projects__bg,
+.about__bg,
+.contact__bg {
+    transition: filter 0.3s ease;
+}

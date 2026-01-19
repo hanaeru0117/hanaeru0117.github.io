@@ -1,8 +1,3 @@
-/**
- * プロジェクトカードのHTMLを生成する
- * @param {Object} project
- * @returns {HTMLElement}
- */
 export function createProjectCard(project) {
   const card = document.createElement('article');
   card.className = 'project-card';
@@ -25,11 +20,6 @@ export function createProjectCard(project) {
   return card;
 }
 
-/**
- * プロジェクト一覧を描画する
- * @param {Array} projects - プロジェクトデータの配列
- * @param {HTMLElement} container - 描画先のコンテナ要素
- */
 export function renderProjects(projects, container) {
   if (!container) return;
 
